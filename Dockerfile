@@ -46,6 +46,7 @@ RUN apk update && apk --no-cache add unzip \
         linux-headers \
         fzf \
         hugo \
+        tmux \
         && rm -rf /var/cache/apk/*
 
 WORKDIR $APP_HOME
