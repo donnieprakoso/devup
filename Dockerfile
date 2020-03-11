@@ -71,3 +71,8 @@ RUN mkdir -p $APP_HOME/.config/nvim/colors/
 COPY init.vim $APP_HOME/.config/nvim/
 COPY monokai_pro.vim $APP_HOME/.config/nvim/colors/
 RUN nvim --headless +PlugInstall +qa
+
+# Installing ngrok
+RUN curl -o $APP_HOME/ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+RUN unzip $APP_HOME/ngrok.zip
+RUN mv $APP_HOME/ngrok /usr/local/bin/
