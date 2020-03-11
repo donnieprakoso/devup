@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2020.01
+    steps:
+      - checkout
+      #- setup_remote_docker
+      - run:
+          name: build-docker
+          command: |
+            echo 'Building Docker image'
+            docker build -t donnieprakoso/devup:latest .
+      - run:
+          name: push-docker
+          command: |
+            echo 'Pushing to DockerHub'
+            docker login -u $DOCKER_LOGIN -p $DOCKER_PASSWORD
+            docker push donnieprakoso/devup:latest
