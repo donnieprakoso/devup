@@ -1,7 +1,8 @@
 # :rocket: DevUp
-> DevUp is a Docker image for isolated development environment. DevUp consists of developer toolings that I've been progressively building for years and now become my primary tool for coding. 
 
-DevUp was initially built as I no longer want to torture my laptop and move all of my development activities using either VPS or VM. This tool is tested with MacOS, Linux and iPadOS.  
+![DevUp](https://circleci.com/gh/donnieprakoso/devup.svg?style=shield)
+
+> DevUp is a Docker image for isolated development environment. DevUp consists of developer toolings that I've been progressively building for years and now become my primary tool for coding. DevUp was initially built as I no longer want to torture my laptop and move all of my development activities using either VPS or VM. This tool is tested with MacOS, Linux and iPadOS.  
 
 # Give It a Spin!
 Assuming that you already have Docker installed, you can easily run DevUp with following commands:
