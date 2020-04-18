@@ -49,6 +49,12 @@ RUN apk update && apk --no-cache add unzip \
         hugo \
         tmux \
         ipython \
+        yarn \
+        ruby \
+        ruby-dev \
+        make \
+        gcc \
+        libc-dev \
         && rm -rf /var/cache/apk/*
 
 WORKDIR $APP_HOME
@@ -94,3 +100,7 @@ RUN pip3 install awslogs
 RUN curl -o $APP_HOME/gitflow-installer.sh -L https://raw.github.com/nvie/gitflow/develop/contrib/gitflow-installer.sh
 RUN chmod +x $APP_HOME/gitflow-installer.sh
 RUN /bin/bash -c $APP_HOME/gitflow-installer.sh
+
+# Install statelint for AWS StepFunctions
+RUN gem install statelint
+
